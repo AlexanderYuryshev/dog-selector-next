@@ -1,0 +1,1 @@
+Dog Selector Web App with Next.js

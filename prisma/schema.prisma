@@ -1,0 +1,45 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model Breed {
+  id                          Int     @id @default(autoincrement())
+  breed                       String  @unique
+  description                 String?
+  temperament                 String?
+  min_height                  Float?
+  max_height                  Float?
+  min_weight                  Float?
+  max_weight                  Float?
+  min_expectancy              Float?
+  max_expectancy              Float?
+  group                       String?
+  grooming_frequency_value    Float?
+  grooming_frequency_category String?
+  shedding_value              Float?
+  shedding_category           String?
+  energy_level_value          Float?
+  energy_level_category       String?
+  trainability_value          Float?
+  trainability_category       String?
+  demeanor_value              Float?
+  demeanor_category           String?
+  affectionate_level          Float?
+  children_suitability        Float?
+  good_with_other_dogs        Float?
+  drooling_level              Float?
+  coat_type                   String?
+  coat_length                 String?
+  playfulness_level           Float?
+  protective_level            Float?
+  adaptability_level          Float?
+  barking_level               Float?
+  mental_stimulation_needs    String?
+  image                       String?
+
+  @@map("breeds")
+}
